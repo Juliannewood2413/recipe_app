@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Recipe from './components/Recipe';
+import Header from './components/Header'
 
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
   const getRecipes = async () =>{
     const response = await fetch(request)
     const data = await response.json();
-    // console.log(data.hits);
+    console.log(data.hits);
     setRecipes(data.hits);
   }
 
@@ -38,6 +39,7 @@ const App = () => {
 
   return(
     <div className="App">
+      <Header />
       <form 
       className="search-form"
       onSubmit={getSearch}
@@ -58,6 +60,7 @@ const App = () => {
         calories={recipe.recipe.calories} 
         image={recipe.recipe.image}
         ingredients={recipe.recipe.ingredients}
+        url={recipe.recipe.url}
         />
       ))}
       </div>
