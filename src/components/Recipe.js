@@ -4,7 +4,7 @@ import {Card, Button} from 'react-bootstrap';
 
 export default function Recipe ({title, calories, image, ingredients, url}) {
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem'}}>
             <Card.Img variant="top" src={image} />
                 <Card.Body>
                 <Card.Title>{title}</Card.Title>
@@ -18,13 +18,3 @@ export default function Recipe ({title, calories, image, ingredients, url}) {
         </Card>
     )
 }
-
-
-        // <div>
-        //     <h1 className={style.recipe}>{title}</h1>
-        //     <ol>{ingredients.map(ingredient => (
-        //         <li>{ingredient.text}</li>
-        //     ))}</ol>
-        //     <p>{calories}</p>
-        //     <img src={image} />
-        // </div>
